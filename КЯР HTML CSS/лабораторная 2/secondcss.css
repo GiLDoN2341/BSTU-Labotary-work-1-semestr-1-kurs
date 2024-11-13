@@ -1,0 +1,13 @@
+*{
+    background-color: #BDB76B;
+}
+body>h2{
+   color: rgb(0, 250, 154);
+   text-align: center;
+}
+body h3{
+    color: yellow;
+}
+#line{
+   text-decoration-line:line-through;
+}

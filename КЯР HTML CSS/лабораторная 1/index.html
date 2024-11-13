@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Яблоня </title>
+    <style>
+        td,tr{
+            padding: 10px;
+            border: 5px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body><input type="button" onclick="go1()" value="1Go"/>
+    <input type="button" onclick="go()" value="2Go"/>
+<input type="button" onclick="go2()" value="3Go"/>
+<input type="button" onclick="go3()" value="4Go"/>
+    <center><h1><font face ="Comic Sans MS" color = "black"  size = "7">Яблоня</font></h1></center> <!-- face - гарнитура шрифта -->
+    <center><h2>Уход за яблоней</h2></center>
+    <h3>Снятие зимнего укрытия и осмотр деревьев</h3>
+        <p><font face ="Comic Sans MS" color = "black"  size = "5"><!--font определяет размер шрифта, цвет и начертание для своего содержимого-->
+        С приходом весны начинается активный сезон ухода за яблонями. 
+        Первым делом необходимо аккуратно снять зимнее укрытие, если таковое использовалось. 
+        Затем следует провести тщательный осмотр каждого дерева на предмет повреждений от мороза, грызунов или болезней. 
+        При обнаружении повреждений необходимо 
+        <span color="blue" font-size="4" font-style="normal" id="span03">немедленно принять меры для их устранения</span>, 
+        чтобы обеспечить здоровый рост и развитие деревьев.
+        </font></p> <ol type="1"> <!-- ol упорядоченый--> <!-- ul неупорядоченый-->
+            <li>Снятие зимнего укрытия и осмотр деревьев</li>  <!-- <li>используется для создания элементов списка.--> 
+       <ul type="disc" class="special">
+            <li>Подпункт 1.1</li>
+            <li>Подпункт 2.2</li>
+       </ul>
+           <li>Весенняя обрезка и формирование кроны</li>
+       <ul type="square" class="specials">
+            <li>Подпункт 2.1</li>
+            <li>Подпункт 2.2</li>
+       </ul>
+   <li>Подкормка и полив</li>
+   <ul>
+   <li type="circle"class="specialz">Подпункт 3.1</li>
+   </ul>
+   </ol>
+   <center><h3><caption>Баллы ученика</caption></h3>
+    <table align="center" border="10px" id="rot">
+        <tr>
+            <td>Предмет</td>
+            <td>Отметка</td>
+        </tr>
+<tr>
+    <td>Математика</td> 
+    <td>6.32</td>
+    
+</tr>
+<tr>
+    <td>Английский язык</td>
+    <td>5.31</td>
+</tr>
+<tr>
+    <td>Белорусский язык</td>
+    <td>7.83</td>
+</tr>
+    </table>
+    </center>
+    <script> 
+    function go1() {
+        console.log(document.getElementsByTagName('*'))
+        console.log(document.body.nodeType)
+        }
+        function go() {
+        let child= document.body.childNodes
+console.log(child)
+}
+function go2() {
+    let span01 = document.getElementsByTagName('*');
+        console.log(span01[18].textContent);
+     let span02 = document.getElementsByTagName('span');
+      console.log(span02[0].textContent);
+      console.log(span03.textContent);
+      
+    }
+    function go3(){
+      let tableSB = document.getElementById('rot');
+      let tdSB = tableSB.getElementsByTagName('td');
+      let All_Ball=0;
+      for( let i=0; i<tdSB.length; i++){
+        if(Number(tdSB[i].textContent))
+        All_Ball= All_Ball+Math.round(tdSB[i].textContent);
+      }
+    let Sr_Ball=All_Ball/3;
+    console.log(All_Ball);
+    console.log(Sr_Ball.toFixed(2));
+    }
+</script>
+</body>
+</html>

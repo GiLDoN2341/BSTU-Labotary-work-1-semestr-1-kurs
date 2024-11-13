@@ -1,0 +1,23 @@
+h1,h2,h3{
+    color:blueviolet;
+    font-family:"Monotype Corsiva";
+}
+.special{
+    color:red;
+    font-family:"Times New Roman";
+    font-size:18pt;
+}
+.specials{
+    color:yellow;
+    font-family:"Times New Roman";
+    font-size:20pt;
+}
+.specialz{
+    color:green;
+    font-family:"Times New Roman";
+    font-size:22pt;
+}
+ tr td{
+    font-family:"Times New Roman";
+    color:blueviolet;
+}

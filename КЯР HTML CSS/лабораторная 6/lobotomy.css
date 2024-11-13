@@ -1,0 +1,24 @@
+div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 15px;
+}
+.div1{
+background-image: linear-gradient(to bottom,blue,red);
+}
+.div2{
+    background-image:-webkit-repeating-linear-gradient(45deg, red
+    20px, blue 20px,blue 30px ,red 30px, red 40px,blue 40px)
+}
+.div3{
+    background-image: -webkit-radial-gradient(yellow, green)
+}
+.div4{
+    background-image:-webkit-repeating-radial-gradient( green 5px,
+    yellow 5px, yellow 10px,green 10px,green 15px,yellow 15px)
+}
+.div5{
+    background-image: radial-gradient(yellow,green, transparent),linear-gradient(blue,violet)
+}

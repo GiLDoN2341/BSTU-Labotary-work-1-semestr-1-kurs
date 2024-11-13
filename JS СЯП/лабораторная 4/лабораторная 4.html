@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-width: 1px;
+            border-style: solid;
+            border-color: blue;
+            text-align: center;
+        }
+        tr,td{
+            border-width: 1px;
+            border-style: solid;
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let k = Number(prompt("Введи к"));
+        let gruppa = { students : 30,
+                        sub_stud(){
+                            let grstmin = this.students - k;
+                           return grstmin;
+                        },
+                        add_stud(){
+                            let grstmax = this.students + k;
+                           return grstmax;
+                        }
+                    }
+        document.write("кол-во студентов в 1й группе(после отчисления): " + gruppa.sub_stud() + "<br>");
+        document.write("кол-во студентов в 1й группе (после добора): " + gruppa.add_stud() + "<br>");
+    let gruppa2 = {
+            students: 60,
+            sub_stud(){
+            let grstmin = this.students - k;
+            return grstmin;
+            },
+            add_stud(){
+            let grstmax = this.students + k;
+            return grstmax;
+            }
+        }
+        document.write("кол-во студентов в 2й группе(после отчисления): " + gruppa2.sub_stud() + "<br>");
+        document.write("кол-во студентов в 2й группе (после добора): " + gruppa2.add_stud() + "<br>");
+
+        let gruppa3 = {
+            students:40,
+            sub_stud(){
+            let grstmin = this.students - k;
+            return grstmin;
+            },
+            add_stud(){
+            let grstmax = this.students + k;
+            return grstmax;
+            }
+        }
+        document.write("кол-во студентов в 3й группе (после отчисления):" + gruppa3.sub_stud() + "<br>");
+        document.write("кол-во студентов в 3й группе (после добавления):" + gruppa3.add_stud() + "<br>"+"<br>");
+    let student1 = {
+        fam:"Сафронов ",
+        name:"Александр",
+        physic: 6,
+        informatic:3,
+        mathemat:7,
+        health:"normal",
+        srball(){
+            let ball = (this.physic + this.informatic + this.mathemat)/3;
+            return ball
+        },
+        in_wind(){
+            return alert(this.fam + this.name)
+        },
+        studinfo(){
+        let Hstr =["Фамилия","Имя","Отметка по математике","Отметка по физике","Отметка по информатике","Состояние здоровья"];
+        let info =[this.fam,this.name,this.mathemat,this.physic,this.informatic,this.health];
+        let table = document.createElement("table");
+        for(let i=0; i<info.length;i++){
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.textContent=Hstr[i];
+            tr.appendChild(td1);
+            let td2 = document.createElement("td");
+            td2.textContent=info[i];
+            tr.appendChild(td2);
+            table.appendChild(tr);
+            }
+        
+    document.body.appendChild(table)
+        }    
+    }
+    document.write("Cредний балл ученика 1: " + student1.srball()+"<br>");
+    student1.in_wind();
+    student1.studinfo();
+    let student2 = {
+        fam:"Линевич ",
+        name:"Владимир",
+        physic: 4,
+        informatic:7,
+        mathemat:10,
+        health:"perfect",
+        srball(){
+            let ball = (this.physic+this.informatic+this.mathemat)/3;
+            return ball
+        },
+        in_wind(){
+            return alert(this.fam + this.name)
+        },
+        studinfo(){
+        let Hstr =["Фамилия","Имя","Отметка по математике","Отметка по физике","Отметка по информатике","Состояние здоровья"];
+        let info =[this.fam,this.name,this.mathemat,this.physic,this.informatic,this.health];
+        let table = document.createElement("table");
+        for(let i=0; i<info.length;i++){
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.textContent=Hstr[i];
+            tr.appendChild(td1);
+            let td2 = document.createElement("td");
+            td2.textContent=info[i];
+            tr.appendChild(td2);
+            table.appendChild(tr);
+            }
+            document.body.appendChild(table);
+        }
+    }
+    document.write("Cредний балл ученика 2: " + student2.srball()+"<br>");
+    student2.in_wind();
+    student2.studinfo();
+    let student3 = {
+        fam:"Олег",
+        name:"Метла",
+        physic: 10,
+        informatic:10,
+        mathemat:1,
+        health:"dead",
+        srball(){
+            let ball = (this.physic+this.informatic+this.mathemat)/3;
+            return ball
+        },
+        in_wind(){
+            return alert(this.fam + this.name)
+        },
+        studinfo(){
+        let Hstr =["Фамилия","Имя","Отметка по математике","Отметка по физике","Отметка по информатике","Состояние здоровья"];
+        let info =[this.fam,this.name,this.mathemat,this.physic,this.informatic,this.health];
+        let table = document.createElement("table");
+        for(let i=0; i<info.length;i++){
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.textContent=Hstr[i];
+            tr.appendChild(td1);
+            let td2 = document.createElement("td");
+            td2.textContent=info[i];
+            tr.appendChild(td2);
+            table.appendChild(tr);
+            }
+            document.body.appendChild(table);
+        }
+    }
+    document.write("Cредний балл ученика 3: " + student3.srball()+"<br>");
+    student3.in_wind();
+    student3.studinfo();
+    let fio = "Сафронов Александр Павлович";
+    let task3 = ["pow", "pop", "push", "shift", "round", "floor", "sline", "sort"];
+     let mAth = [];
+     let arRay = [];
+    for(let i=0; i < task3.length; i++){
+         if (Math[task3[i]])
+         arRay.push(task3[i]);
+        else
+         mAth.push(task3[i]);
+    }console.log(mAth);
+    console.log(arRay);
+     console.log(fio);
+     delete arRay[2];
+    delete fio[2];
+    delete mAth[2];
+     console.log(mAth);
+     console.log(arRay);
+    console.log(fio);
+     fio.in[1];
+    </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>лабораторная 2</title>
+   <meta charset="UTF-8">
+<script>
+    "use strict"
+function n1() {
+    alert("Вас приветсвует учебный центр");
+    let n=prompt("Введите имя")
+    alert("Добро пожаловать на наши курсы, "+ n);
+    let que=confirm("Хотите стать Web-дизайнером?");
+    if (que==true)
+    alert("Учите стили CSS и JavaScript!");
+    else
+    alert("Упускаете время!");
+}
+function n2(){
+    let n1 = 10;
+    let n2 = 5;
+    let n3 = n1 + n2;
+    console.log(n3);
+    let n4 = "10";
+    let n5 = "5";
+    let n6 = n4 + n5;
+    console.log(n6);
+    let n7 = 22;
+    let n8 ="5";
+    let n9 = n7 + n8;
+    document.write("Сумма числа и строки равна" + n9);
+    let n10 = "22";
+    let n11 = 5;
+    let n12 = n10 + n11;
+    document.write("Cумма строки и числа равна" + n12);
+    alert("Результатом сложения строки и числа всегда будет слияние числа и строки в единое целое");
+}
+function n3(){
+    let b1 = 26;
+    let b2 = 4;
+    let b3 = (26*b1+26*b2)/4;
+    let b4 = (14*b1-13*b2)/24;
+    document.write("Остаток от деления значения одного выражения на значение другого равен " + b3 / b4);
+    alert(" деление значения одного выражения на значение другого равно " + b3 / b4);
+}
+let n4 = () =>{
+    let number=prompt("Введите число котрое меньше 20 или больше сорока и не равно 15 и при делении без остатка даёт ноль");
+    if ((number < 20 || number > 40) && number!=15 && number % 5 == 0)
+    alert("Правильное значение");
+    else
+    alert("Не правильное значение");
+}
+function n5(){
+    let num1=Number(prompt("Введите первое число"));
+    let num2=Number(prompt("Введите второе число"));
+    if(num1 > num2)
+    alert(num1 +" больше "+ num2);
+    else if(num1 < num2)
+    alert(num1 +" меньше "+ num2);
+    else
+    alert(num1 +" равно "+ num2);
+}
+function n6(){
+    let date=Number(prompt("Введите число в "));
+        switch (date){
+        case 1:
+        case 8:
+        case 15:
+        case 22:
+        case 29:
+        alert("Понедельник");
+        break; 
+        case 2:
+        case 9:
+        case 16:
+        case 23:
+        case 30:
+        alert("Вторник");
+        break; 
+        case 3:
+        case 10:
+        case 17:
+        case 24:
+        case 31:
+        alert("Среда");
+        break; 
+        case 4:
+        case 11:
+        case 18:
+        case 25:
+        alert("Четверг");
+        break; 
+        case 5:
+        case 12:
+        case 19:
+        case 26:
+        alert("Пятница");
+        break; 
+        case 6:
+        case 13:
+        case 20:
+        case 27:
+        alert("Суббота");
+        break; 
+        case 7:
+        case 14:
+        case 21:
+        case 28:
+        alert("Воскресенье");
+        break; 
+        default:
+        alert("Неверное число") 
+    }
+}      
+function n7(){
+    let ss2 = 0b010001;
+    let ss8 = 0o012354;
+    let ss16 = 0x123fff;
+    alert(ss2);
+    alert(ss8);
+    alert(ss16);          
+}
+function n8(){
+    try {
+    let x = Number(prompt("Решите пример 2+2="));
+    if (x==4)
+    alert(" Правильно :)");
+    else 
+    alert(" Не правильно :(");     
+    } 
+    catch (err) {
+    alert(" Поймали ошибку! ");
+    }
+}
+function n9(){
+   let number1 = Number(prompt("Введите число a:"));
+    let number2 = Number(prompt("Введите число b:"));
+    let table = "<table border='1'>";
+for(let i=1;i<=number1;i++){
+    table += "<tr>";
+    for(let j=1;j<=number2;j++){
+     table += "<td>"+ i*j +"</td>"
+    }
+   table +="</tr>"
+}
+document.write(table + "</table>");
+}
+function n10(){
+    let a=Number(prompt("Введите начальный радиус"));
+    let b=Number(prompt("Введите конечный радиус"));
+    let table = "<table border='1'>";
+     table+="<tr>"+"<td>"+"Радиус"+"</td>"+"<td>"+"Площадь"+"</td>"+"<td>"+"Длинна окружности"+"</td>";
+    do { 
+   table += "<tr>"+"<td>"+ Math.ceil(a) +"</td>"+"<td>"+(Math.ceil(Math.exp(2)*a*Math.PI))+"</td>"+"<td>"+(Math.ceil(2*a*Math.PI))+ "</td>"+"</tr>";
+    a+=0.3;
+}
+    while(a<b);
+    document.write( table +"</table>");
+}
+function n11(){
+    let number1=Number(12);
+     let number2=Number(12.478);
+     let table = "<table border='1'>";
+        table += "<tr>"+"<td>"+"Число" + "</td>"+"<td>"+"Метод" + "</td>"+"<td>"+"Результат" + "</td>"+"<td>"+"Пояснение" + "</td>"+"</tr>";
+    for( let i=1; i<=2; i++){
+        let numbers
+        switch(i){
+        case 1: numbers=number1;
+        break;
+        case 2: numbers=number2;
+        break;
+        }
+    for( let j=1; j<=4; j++){
+        table+="<tr>"
+     switch(j){
+        case 1: table += "<td>" + numbers + "</td>" + "<td> toString(16) </td>" + "<td>" + numbers.toString(16) + "</td>" 
+        + "<td> Строковое представление числа в шеснадцатиричной системе счисления </td>";
+        break;
+        case 2: table += "<td>" + numbers + "</td>" + "<td> toExponential(2) </td>" + "<td>" + numbers.toExponential(2) + "</td>"
+        + "<td> Представляет указанное число в экспоненциальной форме, а после точки указывается два знака </td>";
+        break;
+        case 3:table += "<td>" + numbers + "</td>" + "<td> toPrecision(2) </td>" + "<td>" + numbers.toPrecision(2) + "</td>"
+         + "<td> Представляет число с заданным общим количеством значащих цифр, 2 означает, что первое целое и дробное число впишутся в это число </td>";
+        break;
+        case 4:table+="<td>" + numbers + "</td>" + "<td> toFixed(2) </td>" + "<td>" + numbers.toFixed(2) + "</td>"
+        + "<td> Представляет число в форме с фиксированным количеством цифр после запятой, 2 - сколько цифр после запятой следует указывать </td>";
+        break;
+       }
+     table += "</tr>";
+    }
+}
+document.write(table+"</table>");
+}
+
+</script>
+</head>
+<body>
+<h2> Лабораторная 1</h2>
+<input  type="button" value="Нажми что бы отобразить 1 задание"
+onclick="n1()">
+<input type="button" value="Нажми что бы отобразить 2 задание"
+onclick="n2()">
+<input type="button" value="Нажми что бы отобразить 3 задание"
+onclick="n3()">
+<input type="button" value="Нажми что бы отобразить 4 задание"
+onclick="n4()">
+<input type="button" value="Нажми что бы отобразить 5 задание"
+onclick="n5()">
+<input type="button" value="Нажми что бы отобразить 6 задание"
+onclick="n6()">
+<input type="button" value="Нажми что бы отобразить 7 задание"
+onclick="n7()">
+<input type="button" value="Нажми что бы отобразить 8 задание"
+onclick="n8()">
+<br>
+<h2> Лабораторная 2</h2>
+<input type="button" value="Нажми что бы отобразить 2 задание"
+onclick="n9()">
+<input type="button" value="Нажми что бы отобразить 3 задание"
+onclick="n10()">
+<input type="button" value="Нажми что бы отобразить 4 задание"
+onclick="n11()">
+
+</body>
+</html>

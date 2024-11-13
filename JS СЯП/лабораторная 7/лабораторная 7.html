@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7 lab</title>
+    <style>
+    </style>
+    <script type='text/javascript' src='const.js'> </script>
+</head>
+<body>
+    <form name="dataD" action="лабораторная 7.html">
+        <fieldset style="width: 500px; height: 400px;">
+            <textarea name = "tusk3" value="Факультет ИТ"> Факультет ИТ</textarea><br />
+         <br /><input type='text' name='fio' placeholder="Фамилия" value="Фамилия">
+         <br /> <input type='text' placeholder="Имя" name = "name"value="Имя"><br />
+        <p>Специальность:
+            <select name="spic">
+            <option value="ПОИТ"> ПОИТ</option>
+            <option id="sp"   value="ИСиТ"> ИСИТ</option>
+            <option value="ДЭВИ"> ДЭВИ</option>
+            <option value="ПОИБМС"> ПОИБМС</option>
+        </select>
+    </p><br /><br /><br /><br />
+         <p>Курс:
+            <input type="radio" name = "cur" value="1">1 
+            <input type="radio" name = "cur"value="2"> 2 
+            <input type="radio" name = "cur"value="3"> 3 
+            <input type="radio" name = "cur"value="4"> 4 
+        </p>
+        <p>Предметы:
+            <input type="checkbox" name="Opti"value="ОИТ"> ОИТ
+            <input type="checkbox" name = "Opti" value="ОАП"> ОАП
+            <input type="checkbox"name="Opti"value="История"> История
+            <input type="checkbox" name = "Opti"value="Физика"> Физика
+            <input type="checkbox"name="Opti"value="Математика"> Математика
+            </p>
+            <br />
+            <input type="submit"value="Отправить">
+            <input type="reset"value="Отмена">
+            <br/>
+            <br />
+            <input type="button"value="Напечатать" onclick="write1()">
+            <input type="button"value="Отобразить 2 задание"onclick="write2()">
+         </fieldset>
+        </form>
+</body>
+</html>

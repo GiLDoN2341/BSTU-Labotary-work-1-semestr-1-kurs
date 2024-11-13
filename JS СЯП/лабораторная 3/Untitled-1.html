@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     table {
+          border-color: black;
+          border: 2px solid ;
+     }
+     tr,td{
+        text-align: center;
+        border: 2px solid ;
+     }
+</style>
+</head>
+<body>
+    <script>
+        "use strict"
+     let work1 = new Array();
+     work1 [0]=(Math.ceil(6-(Math.PI**2)+3*Math.exp(8)));
+     work1 [1]=(Math.ceil(2*Math.cos(4) + Math.cos(12) + 8-Math.exp(3)));
+     work1 [2]=(Math.ceil(3*Math.sin(9) + Math.log(5) + 0));
+     work1 [3]=(Math.ceil(2*Math.tan(5) + 6-0+0));
+     console.log(work1);
+      let minWork1 = Math.max(...work1);
+      let maxWork1 = Math.min(...work1);
+    console.log(maxWork1);
+    console.log(minWork1);
+    let work2Of = Array.of(7,"привет",11,true);
+    console.log(...work2Of);
+     let work2From = Array.from(["true", 9], x => x+"1");
+     console.log(work2From[0]);
+     console.log(work2From[1]);
+     let task3 = ["pow", "pop", "push", "shift", "round", "floor", "sline", "sort"];
+     let mAth = [];
+     let arRay = [];
+    for(let i=0; i < task3.length; i++){
+         if (Math[task3[i]])
+         arRay.push(task3[i]);
+        else
+         mAth.push(task3[i]);
+    }
+    arRay.push("from");
+    mAth.unshift("abs")
+console.log(arRay);
+console.log(mAth);
+console.log("длинна массива arRay = "+ arRay.length);
+console.log("длинна массива mAth = " + mAth.length);
+let fio = "Сафронов Александр Павлович";
+console.log("длинна cтроки = " + fio.length);
+let fioLC=fio.toUpperCase();
+let fioUC=fio.toLowerCase();
+console.log(fioLC);
+console.log(fioUC);
+console.log(fioLC.concat(fioUC));
+  let tusk4 = document.createElement("table");
+  let tusk4DAta = ["getFullYear","getMonth", "getDay", "getHours", "getMinutes", "getSeconds"]
+  let tusk4DAtaR = ["Год", "Месяц", "День", "Час", "Минуты", "Секунды"];
+  let dateobj = new Date();
+  for(let i=0;i<tusk4DAta.length; i++){
+     let str = document.createElement("tr");
+        let tdcont1 = document.createElement("td");
+        tdcont1.textContent = tusk4DAtaR[i];
+        str.appendChild(tdcont1);
+        let tdcont2 =  document.createElement("td");
+        tdcont2.textContent = dateobj[tusk4DAta[i]]();
+        str.appendChild(tdcont2);
+        tusk4.appendChild(str);
+  }
+  document.body.appendChild(tusk4);
+        </script>
+</body>
+</html>

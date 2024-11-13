@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>задание 3</title>
+</head>
+<body>
+    <script>
+        "use strict"
+    let a=Number(prompt("число 1"));
+    let b=Number(prompt("число 2"));
+    let table = "<table border='1'>";
+     table+="<tr>"+"<td>"+"Радиус"+"</td>"+"<td>"+"Площадь"+"</td>"+"<td>"+"Длинна окружности"+"</td>";
+    do { 
+   table += "<tr>"+"<td>"+ Math.ceil(a) +"</td>"+"<td>"+(Math.ceil(Math.exp(2)*a*Math.PI))+"</td>"+"<td>"+(Math.ceil(2*a*Math.PI))+ "</td>"+"</tr>";
+    a+=0.3;
+}
+    while(a<b);
+    document.write( table +"</table>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>задание 3</title>
+</head>
+<body>
+    <script>
+        "use strict"
+     let number1=Number(127);
+     let number2=Number(127.4);
+     let table = "<table border='1'>";
+        table = table +"<tr>"+"<td>"+"Число" + "</td>"+"<td>"+"Метод" + "</td>"+"<td>"+"Результат" + "</td>"+"<td>"+"Пояснение" + "</td>"+"</tr>";
+    for( let i=1; i<=2; i++){
+        let numbers
+        switch(i){
+        case 1: numbers=number1;
+        break;
+        case 2: numbers=number2;
+        break;
+        }
+    for( let j=1; j<=4; j++){
+        table+="<tr>"
+     switch(j){
+        case 1: table += "<td>" + numbers + "</td>" + "<td> toString(16) </td>" + "<td>" + numbers.toString(16) + "</td>" 
+        + "<td> Строковое представление числа в 16-ричной системе счисления </td>";
+        break;
+        case 2: table += "<td>" + numbers + "</td>" + "<td> toExponential(2) </td>" + "<td>" + numbers.toExponential(2) + "</td>"
+        + "<td> Представляет указанное число в экспоненциальной форме, а после точки указывается два знака </td>";
+        break;
+        case 3:table += "<td>" + numbers + "</td>" + "<td> toPrecision(2) </td>" + "<td>" + numbers.toPrecision(2) + "</td>"
+         + "<td> Представляет число с заданным общим количеством значащих цифр, 2 означает, что первое целое и дробное число впишутся в это число </td>";
+        break;
+        case 4:table+="<td>" + numbers + "</td>" + "<td> toFixed(2) </td>" + "<td>" + numbers.toFixed(2) + "</td>"
+        + "<td> Представляет число в форме с фиксированным количеством цифр после запятой, 2 - сколько цифр после запятой следует указывать </td>";
+        break;
+       }
+     table += "</tr>";
+    }
+}
+document.write(table+"</table>");
+    </script>
+</body>
+</html>

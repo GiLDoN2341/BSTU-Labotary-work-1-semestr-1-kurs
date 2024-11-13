@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>лабораторная 2</title>
+   <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    "use strict"
+   let x = Number(prompt("Введите число a:"));
+    let y = Number(prompt("Введите число b:"));
+    let table = document.createElement("table");
+    table.setAttribute("border","1")
+for(let i=1;i<=x;i++){
+    let tr = document.createElement("tr");
+    for(let j=1;j<=y;j++){
+    let td = document.createElement("td");
+        td.textContent = i*j
+     tr.appendChild(td);
+    }
+    table.appendChild(tr);
+}
+document.body.appendChild(table);
+</script>
+</body>
+</html>

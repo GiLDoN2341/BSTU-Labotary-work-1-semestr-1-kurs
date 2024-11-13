@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Яблоня </title>
+</head>
+<body>
+    <div id="elem"> Текст изменит цвет на зелёный при наведении курсора </div>
+    <div id="elem2"> Шрифт текста примет значение 30px </div>
+    <div > <img src="pop.jfif"id="elem3"></div>
+    <div id="elem4"> <img src="cate.jpg"id="elem4" height="200px" width="200px"></div>
+    <p> <img src="cate.jpg"id="elem5"height="200px" width="200px"></p>
+    <p id="elem6"> Создать границу абзацу</p>
+    <script>
+        let elem = document.getElementById("elem");
+      elem.onmouseover = function() {
+       elem.style.color ="green";
+    }
+    let elem2= document.getElementById("elem2");
+      elem2.onclick = function(){
+       elem2.style.fontSize ="30px";
+    }
+    let elem3= document.getElementById("elem3");
+      elem3.onclick = function() {
+       elem3.src="corn.jfif"
+    } 
+    let elem4= document.getElementById("elem4");
+      elem4.onclick = function() {
+       elem4.innerHTML = "КООООООООООООООТ";
+    }
+    let elem5= document.getElementById("elem5");
+      elem5.onmouseover= function() {
+       elem5.style.width="1000px";
+    }
+     elem5.onmouseout= function() {
+       elem5.style.width="2000px";
+       elem5.style.height="2000px";
+    }
+   
+    let elem6= document.getElementById("elem6");
+      elem6.addEventListener("dblclick", function() {
+       elem6.style.border = "5px solid black";
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>лабораторная 1</title>
+   <meta charset="UTF-8">
+  </head>
+    <body>
+        <script>
+          "use strict";
+          alert("Вас приветсвует учебный центр");
+           let names=prompt("Введите имя");
+           alert("Добро пожаловать на наши курсы, "+ names);
+           let questions=confirm("Хотите стать Web-дизайнером?");
+           if (questions==true)
+           alert("Учите стили CSS и JavaScript!");
+           else
+           alert("Упускаете время!");
+           let number1 = 10;
+           let number2 = 5;
+           let number3 = number1 + number2;
+           console.log(number3);
+           let number4 = "10";
+           let number5 = "5";
+           let number6 = number4 + number5;
+           console.log(number6);
+           let number7 = 22;
+           let number8 ="5";
+           let number9 = number7 + number8;
+           document.write("Сумма числа и строки равна" + number9 + "</br>");
+           let number10 = "22";
+           let number11 = 5;
+           let number12 = number10 + number11;
+           document.write("Cумма строки и числа равна" + number12 + "</br>");
+          alert("Результатом сложения строки является конкатенация");
+          
+           let b1 = 26;
+           let b2 = 4;
+           let b3 = (26*b1+26*b2)/4;
+           let b4 = (14*b1-13*b2)/24;
+           document.write("Остаток от деления значения одного выражения на значение другого равен " + b3 / b4 + "</br>");
+          alert(" Деление значения одного выражения на значение другого равно " + b3 / b4);
+          
+           let number=Number(prompt("Введите число котрое меньше 20 или больше сорока и не равно 15 и при делении без остатка даёт ноль"));
+           if ((number < 20 || number > 40) && number!=15 && number % 5 == 0)
+           alert("Правильное значение");
+           else
+           alert("Не правильное значение");
+
+           let numbers1=Number(prompt("Введите первое число"));
+           let numbers2=Number(prompt("Введите второе число"));
+           if(numbers1 > number2)
+           alert(numbers1 +" больше "+ numbers2);
+           else if(numbers1 < numbers2)
+           alert(numbers1 +" меньше "+ numbers2);
+           else
+           alert(numbers1 +" равно "+ numbers2);
+          
+        let date=Number(prompt("Введите число в месяце"));
+        switch (date){
+        case 1:
+        case 8:
+        case 15:
+        case 22:
+        case 29:
+        alert("Понедельник");
+        break; 
+        case 2:
+        case 9:
+        case 16:
+        case 23:
+        case 30:
+        alert("Вторник");
+        break; 
+        case 3:
+        case 10:
+        case 17:
+        case 24:
+        case 31:
+        alert("Среда");
+        break; 
+        case 4:
+        case 11:
+        case 18:
+        case 25:
+        alert("Четверг");
+        break; 
+        case 5:
+        case 12:
+        case 19:
+        case 26:
+        alert("Пятница");
+        break; 
+        case 6:
+        case 13:
+        case 20:
+        case 27:
+        alert("Суббота");
+        break; 
+        case 7:
+        case 14:
+        case 21:
+        case 28:
+        alert("Воскресенье");
+        break;  
+        }    
+          let ss2 = 0b010001;
+           let ss8 = 0o012354;
+           let ss16 = 0x123fff;
+           alert(ss2);
+           alert(ss8);
+           alert(ss16);
+           try {
+           let number = prompt("Решите пример 2+2=");
+           if (number==4)
+           alert(" Правильно :)");
+           else 
+           alert("Не правильно :(");     
+           } 
+           catch (err) {
+           alert("Поймали ошибку!");
+           }
+        </script>
+    </body>
+</html>
